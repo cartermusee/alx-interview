@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-# module for creating pascal triangle
+"""module for creating pascal triangle"""
 def pascal_triangle(n):
     """
     function itself
-    args:
+    Args:
         n: the number
-    Return: triangle or 0
+    Returns: triangle or emptylisr
     """
 
     if n <= 0:
@@ -18,4 +18,4 @@ def pascal_triangle(n):
             for j in range(1, i):
                 row[j] = rectangle[i-1][j-1] + rectangle[i-1][j]
             rectangle.append(row)
-        return rectangle
+    return rectangle
