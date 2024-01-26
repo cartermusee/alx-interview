@@ -9,7 +9,7 @@ def minOperations(n):
     n: the number
     Return: operations
     """
-    if n == 1:
+    if n <= 1:
         return 0
 
     def smallest_prime_factor(num):
