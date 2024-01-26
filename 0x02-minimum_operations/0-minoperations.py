@@ -4,7 +4,7 @@
 
 def minOperations(n):
     """takes a number n
-    
+
     Keyword arguments:
     n: the number
     Return: operations
@@ -14,7 +14,6 @@ def minOperations(n):
 
     def smallest_prime_factor(num):
         """small prime num
-        
         Keyword arguments:
         num: the number
         Return: num
