@@ -3,7 +3,7 @@
 from typing import List
 
 
-def validUTF8(data: List[int]) -> int:
+def validUTF8(data: List[int]) -> bool:
     """validating utf8
     Keyword arguments:
     data: data to avlidate
