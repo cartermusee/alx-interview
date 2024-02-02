@@ -9,7 +9,6 @@ def validUTF8(data: List[int]) -> bool:
     data: data to avlidate
     Return: bytes
     """
-    data = data[-8:]
     bts = 0
     for byte in data:
         if bts:
