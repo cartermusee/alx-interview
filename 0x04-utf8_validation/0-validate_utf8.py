@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """moduel for utf validation"""
+from typing import List
 
 
-def validUTF8(data):
+def validUTF8(data: List[int]) -> int:
     """validating utf8
     Keyword arguments:
     data: data to avlidate
