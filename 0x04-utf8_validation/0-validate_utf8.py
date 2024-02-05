@@ -9,22 +9,23 @@ def validUTF8(data: List[int]) -> bool:
     data: data to avlidate
     Return: bytes
     """
-    bts = 0
+
+    count = 0
     for byte in data:
-        if bts:
-            if byte >> 6 == 0b10:
-                bts -= 1
+        byte &= 0xFF
+        if count == 0:
+            if byte <= 0x7F:
+                count = 0
+            elif byte <= 0xDF:
+                count = 1
+            elif byte <= 0xEF:
+                count = 2
+            elif byte <= 0xF4:
+                count = 3
             else:
                 return False
         else:
-            if byte >> 7 == 0:
-                bts = 0
-            elif byte >> 5 == 0b110:
-                bts = 1
-            elif byte >> 4 == 0b1110:
-                bts = 2
-            elif byte >> 3 == 0b11110:
-                bts = 3
-            else:
+            if byte >> 6 != 2:
                 return False
-    return bts == 0
+            count -= 1
+    return count == 0
