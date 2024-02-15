@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+// script for star wars api
 
 const request = require('request');
 let movieId = process.argv[2];
