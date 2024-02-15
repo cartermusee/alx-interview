@@ -2,7 +2,7 @@
 // script for star wars api
 
 const request = require('request');
-let movieId = process.argv[2];
+const movieId = process.argv[2];
 const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 request(url,( err, response, body) => {
@@ -27,4 +27,4 @@ request(url,( err, response, body) => {
             console.log(names.name);   
         })
     }
-})
+});
