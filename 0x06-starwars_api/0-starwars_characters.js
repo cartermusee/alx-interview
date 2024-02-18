@@ -24,7 +24,8 @@ request(url,( err, response, body) => {
                 return;
             }
             const names = JSON.parse(body);
-            console.log(names.name);   
+            const all = names.name
+            console.log(all);   
         })
     }
 });
