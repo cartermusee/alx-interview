@@ -6,6 +6,8 @@ def isWinner(x, nums):
     """determines the winner
     of a game played by Maria and Ben based on the given rules.
     """
+    if x < 1 or not  nums:
+        return None
     maria_wins = ben_wins = 0
     for num in nums:
         if num % 2 == 0:
